@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+        crossorigin="anonymous" />
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" 
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" 
+        crossorigin="anonymous" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/angle-brackets.png" alt="">
+            </div>
+
+            <button class="nav-togle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__items"><a href="home" class="nav__link">Home</a></li>
+                    <li class="nav__items"><a href="skills" class="nav__link">My Skills</a></li>
+                    <li class="nav__items"><a href="about" class="nav__link">About me</a></li>
+                    <li class="nav__items"><a href="work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Aidan Carling</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--into">Software Engineer</p>
+        </section>
+
+        <!-- My Skills-->
+        <section class="my-skills" id="skills">
+            <h2 class="section__title section__title--skills">What I do</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Skill 1</h3>
+                    <p></p>
+                </div> <!-- closing of a sub skill-->
+
+                <div class="skill">
+                    <h3>skill 2 </h3>
+                    <p></p>
+                </div> <!-- closing of a sub skill-->
+
+                <div class="skill">
+                    <h3>skill 3</h3>
+                    <p></p>
+                </div> <!-- closing of a sub skill-->
+
+                <a href="work" class="btn">My Work</a>
+            </div> <!-- closing of skills-->
+        </section>
+
+        <!-- About Me-->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who am I</h2>
+            <p class="Section__subtitle section__subtitle--about"></p>
+            <div class="about-me__body">
+                <p></p>
+            </div>
+        </section>
+
+        <!-- My Work-->
+        <section class="my-work" id="work">
+            <h2 class="section__title">My work</h2>
+            <p class="section__subtitle"></p>
+
+            <div class="projects">
+                <!--Project item #1-->
+                <a href="#" class="project__item">
+                    <img src="noughtsAndCrossesImg.jpg" alt="" class="project__img">
+                </a>
+
+                <!--Project item #2-->
+                <a href="#" class="project__item">
+                    <img src="noughtsAndCrossesImg.jpg" alt="" class="project__img">
+                </a>
+
+                <!--Project item #3-->
+                <a href="#" class="project__item">
+                    <img src="noughtsAndCrossesImg.jpg" alt="" class="project__img">
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link"
+                    href="https://www.github.com/AidanCarling">github</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
