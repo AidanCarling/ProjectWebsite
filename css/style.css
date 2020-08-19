@@ -409,3 +409,17 @@ form {
 .footer__list__link {
     padding: 0.5em;
 }
+
+
+/* individual portfolio item */
+.project-item-individual {
+    padding: 0 2em 2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
