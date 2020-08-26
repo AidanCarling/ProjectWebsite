@@ -13,70 +13,14 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" 
         crossorigin="anonymous" />
 
+        <script src="https://ugz53wh6i7.execute-api.us-east-1.amazonaws.com"></script>
+
         <!--link font-->
         <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 
 
         <!--Linking relevant files in directory-->
         <link rel="stylesheet" href="css/style.css">
-
-        <!--Contact me form-->
-        function submitToAPI(e) {
-            e.preventDefault();
-            var URL = "https://shnulb6al4.execute-api.us-east-1.amazonaws.com";
-     
-                 var Namere = /[A-Za-z]{1}[A-Za-z]/;
-                 if (!Namere.test($("#name-input").val())) {
-                              alert ("Name can not less than 2 char");
-                     return;
-                 }
-                 var mobilere = /[0-9]{10}/;
-                 if (!mobilere.test($("#phone-input").val())) {
-                     alert ("Please enter valid mobile number");
-                     return;
-                 }
-                 if ($("#email-input").val()=="") {
-                     alert ("Please enter your email id");
-                     return;
-                 }
-     
-                 var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-                 if (!reeamil.test($("#email-input").val())) {
-                     alert ("Please enter valid email address");
-                     return;
-                 }
-     
-            var name = $("#name-input").val();
-            var phone = $("#phone-input").val();
-            var email = $("#email-input").val();
-            var desc = $("#description-input").val();
-            var data = {
-               name : name,
-               phone : phone,
-               email : email,
-               desc : desc
-             };
-     
-            $.ajax({
-              type: "POST",
-              url : "https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact",
-              dataType: "json",
-              crossDomain: "true",
-              contentType: "application/json; charset=utf-8",
-              data: JSON.stringify(data),
-     
-              
-              success: function () {
-                // clear form and show a success message
-                alert("Successfull");
-                document.getElementById("contact-form").reset();
-            location.reload();
-              },
-              error: function () {
-                // show an error message
-                alert("UnSuccessfull");
-              }});
-          }
 
 
     </head>
@@ -213,12 +157,12 @@
         <section class="contact-me" id="contact">
             <h2 class="section__title section__title--contact">Contact Me</h2>
             <div class="contactform">
-                <form id="contact-form" action="php/contactform.php" method="post">
+                <form id="contact-form" action="submitToAPI(event)" method="post">
                     <input class="form-control" type="text" name="name" placeholder="Full name" required><br>
                     <input class="form-control" type="text" name="mail" placeholder="Your email" required><br>
                     <input class="form-control" type="text" name="subject" placeholder="subject" required><br>
                     <textarea class="form-control" name="Message" placeholder="Message" required></textarea><br>
-                    <button class="form-control submit" type="submit" name="submit">SEND MAIL</button>
+                    <button class="form-control submit" type="submit" name="submit" onclick="submitToAPI(event)">SEND MAIL</button>
                 </form>
         </div>
         </section>
