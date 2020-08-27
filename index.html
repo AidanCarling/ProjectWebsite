@@ -13,8 +13,6 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" 
         crossorigin="anonymous" />
 
-        <script src="https://4u8v6seemi.execute-api.eu-west-2.amazonaws.com"></script>
-
         <!--link font-->
         <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 
@@ -157,15 +155,39 @@
         <section class="contact-me" id="contact">
             <h2 class="section__title section__title--contact">Contact Me</h2>
             <div class="contactform">
-                <form id="contact-form" action="submitToAPI(event)" method="post">
-                    <input class="form-control" type="text" name="name" placeholder="Full name" required><br>
-                    <input class="form-control" type="text" name="mail" placeholder="Your email" required><br>
-                    <input class="form-control" type="text" name="subject" placeholder="subject" required><br>
-                    <textarea class="form-control" name="Message" placeholder="Message" required></textarea><br>
-                    <button class="form-control submit" type="submit" name="submit" onclick='submitToApi(event)'>SEND MAIL</button>
+                <form id="contact-form">
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Full name" required><br>
+                    <input class="form-control" type="text" name="mail" id="mail" placeholder="Your email" required><br>
+                    <input class="form-control" type="text" name="subject" id="subject" placeholder="subject" required><br>
+                    <textarea class="form-control" name="message" placeholder="Message" id="message" required></textarea><br>
+                    <button class="form-control submit" id="submitButton">SEND MAIL</button>
                 </form>
         </div>
         </section>
+
+        <script type="text/javascript">
+            /*
+            var API_URL = 'https://4u8v6seemi.execute-api.eu-west-2.amazonaws.com';
+
+            $(submitButton).on('click', function() {
+                $.ajax({
+                    type: 'POST',
+                    url: API_URL,
+                    dataType: "json",
+                    crossDomain: "true",
+                    data: JSON.stringify(data),
+                    data: JSON.stringify({"name": "$('name')".val(),
+                                        "email": "$('mail')".val(),
+                                        "subject": "$('subject')".val(),
+                                        "desc": "$('message')".val()}),
+                    contentType: "application/json; charset=utf-8",
+                    success: function(data) {
+                        location.reload();
+                    }
+                });
+                return false;
+            });*/
+        </script>
 
 
         <!-- Footer -->
@@ -190,6 +212,8 @@
         </footer>
 
         <script src="js/navigation.js"></script>
+        <script src="js/contactform.js"></script>
+        <script src="js/contactfunction.js"></script>
 
     </body>
 </html>
