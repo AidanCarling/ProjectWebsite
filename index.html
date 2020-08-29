@@ -20,6 +20,8 @@
         <!--Linking relevant files in directory-->
         <link rel="stylesheet" href="css/style.css">
 
+        <script src='js/ContactForm.js' defer></script>
+
 
     </head>
     <body>
@@ -155,40 +157,23 @@
         <section class="contact-me" id="contact">
             <h2 class="section__title section__title--contact">Contact Me</h2>
             <div class="contactform">
-                <form id="contact-form">
+                <!--<form id="contact-form">
                     <input class="form-control" type="text" name="name" id="name" placeholder="Full name" required><br>
-                    <input class="form-control" type="text" name="mail" id="mail" placeholder="Your email" required><br>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Your email" required><br>
                     <input class="form-control" type="text" name="subject" id="subject" placeholder="subject" required><br>
-                    <textarea class="form-control" name="message" placeholder="Message" id="message" required></textarea><br>
-                    <button class="form-control submit" id="submitButton">SEND MAIL</button>
+                    <textarea class="form-control" rows="5" name="content" placeholder="Message" id="message" required></textarea><br>
+                    <button class="form-control submit" type="submit" id="submit">SEND MAIL</button>
+                </form>-->
+
+                <form id="contactForm">
+                    <input class="form-control" type="text" placeholder="Name" name="name" required>
+                    <input class="form-control" type="email" placeholder="Email Address" name="email" required>
+                    <textarea class="form-control" rows="5" placeholder="Message" name="content" required></textarea>
+                    <div id="toast"></div>
+                    <button type="submit" id="submit">Send</button>
                 </form>
         </div>
         </section>
-
-        <script type="text/javascript">
-            /*
-            var API_URL = 'https://4u8v6seemi.execute-api.eu-west-2.amazonaws.com';
-
-            $(submitButton).on('click', function() {
-                $.ajax({
-                    type: 'POST',
-                    url: API_URL,
-                    dataType: "json",
-                    crossDomain: "true",
-                    data: JSON.stringify(data),
-                    data: JSON.stringify({"name": "$('name')".val(),
-                                        "email": "$('mail')".val(),
-                                        "subject": "$('subject')".val(),
-                                        "desc": "$('message')".val()}),
-                    contentType: "application/json; charset=utf-8",
-                    success: function(data) {
-                        location.reload();
-                    }
-                });
-                return false;
-            });*/
-        </script>
-
 
         <!-- Footer -->
         <footer class="footer">
@@ -212,8 +197,7 @@
         </footer>
 
         <script src="js/navigation.js"></script>
-        <script src="js/contactform.js"></script>
-        <script src="js/contactfunction.js"></script>
+        
 
     </body>
 </html>
